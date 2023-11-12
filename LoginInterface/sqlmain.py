@@ -94,21 +94,22 @@ while True:
         
                           delete_user(username)
                           continue   
-                        
-                        
-                    elif secim == "5":
+
+                    else:
+                        print("Hatalı Giriş")
+                        continue    
+                   #elif secim == "5":
                     
-                          username = input("Kullanıcı adınızı giriniz")
-                          user = search_username(username)
-                          conn.sql('data.db')
-                          conn.cursor()
-        
-                          if user == None:
-                              print("Hatalı Kullanıcı adı")
-                              continue
-                            
-                          else:
-                              cursor.execute(""" """)
+                    #      username = input("Kullanıcı adınızı giriniz")
+                    #    conn.sql('data.db')
+                    #      user = search_username(username)
+                    #    conn.cursor()
+                    #    if user == None:
+                    #          print("Hatalı Kullanıcı adı")
+                    #          continue
+                    #        
+                    #      else:
+                    #          cursor.execute(""" """)/*
         
         
                     elif secim == "4":        
@@ -148,5 +149,8 @@ while True:
     elif secim == "3":
         print("Program Sonlandırıldı")
         break
+    else: 
+        print("Hatalı giriş")
+        continue
 
 conn.close()
